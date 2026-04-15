@@ -9,13 +9,19 @@
   <meta property="og:description" content="An open-source, privacy-first loyalty card wallet for iOS and Apple Watch.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aykutaras.github.io/cardoodle/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <nav class="nav">
     <div class="nav-inner">
-      <a href="./" class="nav-brand">Cardoodle</a>
+      <a href="./" class="nav-brand">
+        <img src="img/cardoodle.png" alt="Cardoodle" class="nav-logo">
+        Cardoodle
+      </a>
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
         <li><a href="#privacy">Privacy</a></li>
@@ -25,15 +31,47 @@
   </nav>
 
   <section class="hero">
-    <h1>Cardoodle</h1>
-    <p class="tagline">
-      An open-source, privacy-first loyalty card wallet for iOS and Apple Watch.
-      Ditch the physical cards — scan, store, and display barcodes right from your pocket or wrist.
-    </p>
-    <div class="badge-row">
-      <span class="badge"><span class="badge-dot"></span> Zero tracking</span>
-      <span class="badge"><span class="badge-dot"></span> No third-party SDKs</span>
-      <span class="badge"><span class="badge-dot"></span> 100% open source</span>
+    <div class="hero-content">
+      <img src="img/cardoodle.png" alt="Cardoodle app icon" class="hero-icon">
+      <h1>Cardoodle</h1>
+      <p class="tagline">
+        An open-source, privacy-first loyalty card wallet for iOS and Apple Watch.
+        Ditch the physical cards — scan, store, and display barcodes right from your pocket or wrist.
+      </p>
+      <div class="badge-row">
+        <span class="badge"><span class="badge-dot"></span> Zero tracking</span>
+        <span class="badge"><span class="badge-dot"></span> No third-party SDKs</span>
+        <span class="badge"><span class="badge-dot"></span> 100% open source</span>
+      </div>
+    </div>
+
+    <div class="hero-devices">
+      <div class="device-iphone">
+        <div class="device-frame">
+          <div class="device-notch"></div>
+          <div class="device-screen">
+            <div class="screen-placeholder">
+              <span class="screen-header">My Cards</span>
+              <div class="placeholder-card" style="--card-color: #2D6CB5"></div>
+              <div class="placeholder-card" style="--card-color: #5A9E6F"></div>
+              <div class="placeholder-card" style="--card-color: #E06B5E"></div>
+              <div class="placeholder-card" style="--card-color: #D4892E"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="device-watch">
+        <div class="watch-frame">
+          <div class="watch-crown"></div>
+          <div class="watch-button"></div>
+          <div class="watch-screen">
+            <span class="watch-screen-header">Cards</span>
+            <div class="placeholder-card-sm" style="--card-color: #2D6CB5"></div>
+            <div class="placeholder-card-sm" style="--card-color: #5A9E6F"></div>
+            <div class="placeholder-card-sm" style="--card-color: #E06B5E"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -43,37 +81,49 @@
 
     <div class="features-grid">
       <div class="feature-card">
-        <span class="feature-icon" aria-hidden="true">&#x1F4F7;</span>
+        <div class="feature-icon-wrap" style="--icon-color: #2D6CB5">
+          <span class="feature-icon" aria-hidden="true">&#x1F4F7;</span>
+        </div>
         <h3>Scan or enter barcodes</h3>
         <p>Point your camera at any loyalty card barcode, or enter the number manually. Supports QR, Code128, EAN-13, EAN-8, Code39, PDF417, and Aztec.</p>
       </div>
 
       <div class="feature-card">
-        <span class="feature-icon" aria-hidden="true">&#x1F50D;</span>
+        <div class="feature-icon-wrap" style="--icon-color: #D4892E">
+          <span class="feature-icon" aria-hidden="true">&#x1F50D;</span>
+        </div>
         <h3>Fullscreen display</h3>
         <p>Show barcodes at maximum screen brightness on a white background for reliable scanning at checkout — every time.</p>
       </div>
 
       <div class="feature-card">
-        <span class="feature-icon" aria-hidden="true">&#x231A;</span>
+        <div class="feature-icon-wrap" style="--icon-color: #4E51BF">
+          <span class="feature-icon" aria-hidden="true">&#x231A;</span>
+        </div>
         <h3>Apple Watch companion</h3>
         <p>Browse your cards and display barcodes from your wrist. Cards sync automatically from your iPhone via WatchConnectivity.</p>
       </div>
 
       <div class="feature-card">
-        <span class="feature-icon" aria-hidden="true">&#x1F4F8;</span>
+        <div class="feature-icon-wrap" style="--icon-color: #E06B5E">
+          <span class="feature-icon" aria-hidden="true">&#x1F4F8;</span>
+        </div>
         <h3>Card photos and notes</h3>
         <p>Photograph the front and back of physical cards. Store account numbers, PINs, or reminders alongside each card.</p>
       </div>
 
       <div class="feature-card">
-        <span class="feature-icon" aria-hidden="true">&#x2601;</span>
+        <div class="feature-icon-wrap" style="--icon-color: #3FA89B">
+          <span class="feature-icon" aria-hidden="true">&#x2601;</span>
+        </div>
         <h3>Optional iCloud sync</h3>
         <p>Sync cards across all your Apple devices using CloudKit's private database. Completely opt-in — works fully offline.</p>
       </div>
 
       <div class="feature-card">
-        <span class="feature-icon" aria-hidden="true">&#x2B50;</span>
+        <div class="feature-icon-wrap" style="--icon-color: #D4A832">
+          <span class="feature-icon" aria-hidden="true">&#x2B50;</span>
+        </div>
         <h3>Pin favorites</h3>
         <p>Keep your most-used cards at the top. Search instantly by name. Customize with colors and icons.</p>
       </div>
@@ -113,6 +163,9 @@
       Cardoodle is fully open source under the MIT License.
       Audit the code, contribute, or fork it — it's yours.
     </p>
+    <div class="code-block">
+      <code>git clone https://github.com/aykutaras/cardoodle.git</code>
+    </div>
     <a href="https://github.com/aykutaras/cardoodle" class="btn btn-primary">View on GitHub</a>
   </section>
 
@@ -127,6 +180,20 @@
       <p class="footer-copy">&copy; 2026 Scaled Evolution. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.feature-card, .privacy-banner, .open-source, .hero-devices')
+      .forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
