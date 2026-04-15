@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardoodle — Privacy-First Loyalty Card Wallet</title>
+  <meta name="description" content="An open-source, privacy-first loyalty card wallet for iOS and Apple Watch. Store, display, and manage loyalty card barcodes with zero tracking.">
+  <meta property="og:title" content="Cardoodle — Privacy-First Loyalty Card Wallet">
+  <meta property="og:description" content="An open-source, privacy-first loyalty card wallet for iOS and Apple Watch.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aykutaras.github.io/cardoodle/">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="./" class="nav-brand">Cardoodle</a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="https://github.com/aykutaras/cardoodle">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Cardoodle</h1>
+    <p class="tagline">
+      An open-source, privacy-first loyalty card wallet for iOS and Apple Watch.
+      Ditch the physical cards — scan, store, and display barcodes right from your pocket or wrist.
+    </p>
+    <div class="badge-row">
+      <span class="badge"><span class="badge-dot"></span> Zero tracking</span>
+      <span class="badge"><span class="badge-dot"></span> No third-party SDKs</span>
+      <span class="badge"><span class="badge-dot"></span> 100% open source</span>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <h2 class="section-title">Everything you need, nothing you don't</h2>
+    <p class="section-subtitle">Built entirely with Apple frameworks. No accounts, no ads, no telemetry.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon" aria-hidden="true">&#x1F4F7;</span>
+        <h3>Scan or enter barcodes</h3>
+        <p>Point your camera at any loyalty card barcode, or enter the number manually. Supports QR, Code128, EAN-13, EAN-8, Code39, PDF417, and Aztec.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon" aria-hidden="true">&#x1F50D;</span>
+        <h3>Fullscreen display</h3>
+        <p>Show barcodes at maximum screen brightness on a white background for reliable scanning at checkout — every time.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon" aria-hidden="true">&#x231A;</span>
+        <h3>Apple Watch companion</h3>
+        <p>Browse your cards and display barcodes from your wrist. Cards sync automatically from your iPhone via WatchConnectivity.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon" aria-hidden="true">&#x1F4F8;</span>
+        <h3>Card photos and notes</h3>
+        <p>Photograph the front and back of physical cards. Store account numbers, PINs, or reminders alongside each card.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon" aria-hidden="true">&#x2601;</span>
+        <h3>Optional iCloud sync</h3>
+        <p>Sync cards across all your Apple devices using CloudKit's private database. Completely opt-in — works fully offline.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon" aria-hidden="true">&#x2B50;</span>
+        <h3>Pin favorites</h3>
+        <p>Keep your most-used cards at the top. Search instantly by name. Customize with colors and icons.</p>
+      </div>
+    </div>
+
+    <div class="barcode-types">
+      <span class="barcode-tag">QR</span>
+      <span class="barcode-tag">Code128</span>
+      <span class="barcode-tag">EAN-13</span>
+      <span class="barcode-tag">EAN-8</span>
+      <span class="barcode-tag">Code39</span>
+      <span class="barcode-tag">PDF417</span>
+      <span class="barcode-tag">Aztec</span>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="privacy-banner">
+      <h2>Privacy is not a feature — it's the foundation</h2>
+      <p>
+        Cardoodle has zero third-party SDKs. Your loyalty card data never leaves your device unless
+        you explicitly enable iCloud sync, which uses your own private iCloud account.
+      </p>
+      <ul class="privacy-list">
+        <li><span class="privacy-check" aria-hidden="true">&#x2713;</span> No analytics</li>
+        <li><span class="privacy-check" aria-hidden="true">&#x2713;</span> No telemetry</li>
+        <li><span class="privacy-check" aria-hidden="true">&#x2713;</span> No accounts</li>
+        <li><span class="privacy-check" aria-hidden="true">&#x2713;</span> No ads</li>
+      </ul>
+      <a href="privacy.html" class="btn btn-secondary">Read Privacy Policy</a>
+    </div>
+  </section>
+
+  <section class="open-source">
+    <h2>Open source, always</h2>
+    <p>
+      Cardoodle is fully open source under the MIT License.
+      Audit the code, contribute, or fork it — it's yours.
+    </p>
+    <a href="https://github.com/aykutaras/cardoodle" class="btn btn-primary">View on GitHub</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="https://github.com/aykutaras/cardoodle">Source Code</a></li>
+        <li><a href="https://github.com/aykutaras/cardoodle/issues">Support</a></li>
+        <li><a href="https://github.com/aykutaras/cardoodle/blob/main/LICENSE">MIT License</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Scaled Evolution. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
