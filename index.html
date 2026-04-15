@@ -19,7 +19,7 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="./" class="nav-brand">
-        <img src="img/cardoodle.png" alt="Cardoodle" class="nav-logo">
+        <img src="img/cardoodle.png" alt="" class="nav-logo" width="32" height="32">
         Cardoodle
       </a>
       <ul class="nav-links">
@@ -32,7 +32,7 @@
 
   <section class="hero">
     <div class="hero-content">
-      <img src="img/cardoodle.png" alt="Cardoodle app icon" class="hero-icon">
+      <img src="img/cardoodle.png" alt="Cardoodle app icon" class="hero-icon" width="96" height="96">
       <h1>Cardoodle</h1>
       <p class="tagline">
         An open-source, privacy-first loyalty card wallet for iOS and Apple Watch.
@@ -182,6 +182,8 @@
   </footer>
 
   <script>
+    document.documentElement.classList.add('js-animations');
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

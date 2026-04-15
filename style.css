@@ -44,7 +44,12 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -395,6 +400,7 @@ a:hover {
   max-width: 980px;
   margin: 0 auto;
   padding: 5rem 2rem;
+  scroll-margin-top: 56px;
 }
 
 .section-title {
@@ -436,6 +442,7 @@ a:hover {
   width: 48px;
   height: 48px;
   border-radius: 12px;
+  background: rgba(45, 108, 181, 0.12);
   background: color-mix(in srgb, var(--icon-color) 12%, transparent);
   display: flex;
   align-items: center;
@@ -464,6 +471,7 @@ a:hover {
 /* Privacy Banner */
 #privacy {
   padding: 0 2rem 5rem;
+  scroll-margin-top: 56px;
 }
 
 .privacy-banner {
@@ -620,6 +628,8 @@ a:hover {
   font-size: 0.8125rem;
   color: var(--primary);
   user-select: all;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 /* Footer */
@@ -731,29 +741,29 @@ a:hover {
   margin-bottom: 0.375rem;
 }
 
-/* Scroll Animations */
-.feature-card,
-.privacy-banner,
-.open-source,
-.hero-devices {
+/* Scroll Animations — only active when JS adds .js-animations to <html> */
+.js-animations .feature-card,
+.js-animations .privacy-banner,
+.js-animations .open-source,
+.js-animations .hero-devices {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.feature-card.in-view,
-.privacy-banner.in-view,
-.open-source.in-view,
-.hero-devices.in-view {
+.js-animations .feature-card.in-view,
+.js-animations .privacy-banner.in-view,
+.js-animations .open-source.in-view,
+.js-animations .hero-devices.in-view {
   opacity: 1;
   transform: translateY(0);
 }
 
-.feature-card:nth-child(2) { transition-delay: 0.08s; }
-.feature-card:nth-child(3) { transition-delay: 0.16s; }
-.feature-card:nth-child(4) { transition-delay: 0.24s; }
-.feature-card:nth-child(5) { transition-delay: 0.32s; }
-.feature-card:nth-child(6) { transition-delay: 0.4s; }
+.js-animations .feature-card:nth-child(2):not(.in-view) { transition-delay: 0.08s; }
+.js-animations .feature-card:nth-child(3):not(.in-view) { transition-delay: 0.16s; }
+.js-animations .feature-card:nth-child(4):not(.in-view) { transition-delay: 0.24s; }
+.js-animations .feature-card:nth-child(5):not(.in-view) { transition-delay: 0.32s; }
+.js-animations .feature-card:nth-child(6):not(.in-view) { transition-delay: 0.4s; }
 
 /* Responsive — Tablet */
 @media (max-width: 768px) {
@@ -781,6 +791,10 @@ a:hover {
   .hero-devices {
     transform: scale(0.8);
     transform-origin: center top;
+  }
+
+  .hero {
+    overflow: hidden;
   }
 }
 
@@ -838,5 +852,23 @@ a:hover {
   .code-block {
     font-size: 0.75rem;
     padding: 0.625rem 1rem;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .js-animations .feature-card,
+  .js-animations .privacy-banner,
+  .js-animations .open-source,
+  .js-animations .hero-devices {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .feature-card:hover,
+  .btn:hover,
+  .barcode-tag:hover {
+    transform: none;
   }
 }
